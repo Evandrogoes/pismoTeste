@@ -11,8 +11,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
 import org.hibernate.annotations.CreationTimestamp;
-import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.format.annotation.DateTimeFormat.ISO;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -39,8 +37,7 @@ public class Transaction {
 	@JsonProperty("amount")
 	private Double amount;
 	@Column(name = "event_date")
-	@CreationTimestamp
-	@DateTimeFormat (iso = ISO.DATE_TIME)	
+	@CreationTimestamp	
 	private Timestamp eventDate;
 
 	public Transaction() {

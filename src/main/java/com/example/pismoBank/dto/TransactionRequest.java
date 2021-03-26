@@ -1,15 +1,27 @@
 package com.example.pismoBank.dto;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Positive;
+
+import org.springframework.format.annotation.NumberFormat;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 
 public class TransactionRequest {
 	
 	@JsonProperty("account_id")
+	@NotBlank(message = "Numero da Conta obrigatorio")
+	@Positive
 	private Integer accountId;
+	@NotBlank(message = "Tipo de Operacao obrigatorio")
+	@Positive	
 	@JsonProperty("operation_type_id")
 	private Integer operationTypeId;
+	@NotBlank(message = "Valor da transacao obrigatorio")
+	@Positive (message = "Valor da transacao deve ser positiva e maior que zero")
 	@JsonProperty("amount")
+	@NumberFormat(pattern = "#.##")
 	private Double amount;
 	
 	public TransactionRequest() {

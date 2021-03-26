@@ -39,8 +39,7 @@ public class Transaction {
 	@JsonProperty("amount")
 	private Double amount;
 	@Column(name = "event_date")
-	@CreationTimestamp
-	@DateTimeFormat (iso = ISO.DATE_TIME)	
+	@CreationTimestamp	
 	private Timestamp eventDate;
 
 	public Transaction() {

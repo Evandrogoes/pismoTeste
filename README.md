@@ -35,9 +35,9 @@ A API implementa 3 endpoins:
 
 relative path : /pismoBank
 
-/accounts - Para criação de conta 
-/accounts/:accountId - Consulta de informações de conta passando o identificador da conta como parametro.
-/transactions - Criar uma transação passando como parametros: identificador da conta, tipo de operação e valor da transação
+* /accounts - Para criação de conta 
+* /accounts/:accountId - Consulta de informações de conta passando o identificador da conta como parametro.
+* /transactions - Criar uma transação passando como parametros: identificador da conta, tipo de operação e valor da transação
 
 
 Para acessar a documentação mais detalhada da API, rode a aplciação e acesse o caminho  {baseUrl}/pismoBank/swagger-ui/index.html#/, 

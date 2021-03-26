@@ -10,7 +10,7 @@ import com.example.pismoBank.model.Account;
 
 class AccountServiceTest {
 
-	AccountService accountService;
+	AccountService accountService = new AccountService();
 	
 	@Test
 	void testeConverterAccountRequestoParaAccount() {
